@@ -16,6 +16,7 @@
   </style>
 </head>
 <body class="bg-gray-950 text-white selection:bg-cyan-500/30">
+  <!-- Header/Nav -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-gray-950/60 backdrop-blur">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-3 font-extrabold text-xl">
@@ -32,9 +33,12 @@
   </header>
 
   <main id="top">
+    <!-- Hero -->
     <section class="relative h-[92vh] min-h-[560px] w-full overflow-hidden">
-      <img alt="Miami water" src="https://images.unsplash.com/photo-1603436323647-53bd0a38f2f2?auto=format&fit=crop&w=1600&q=80" class="absolute inset-0 h-full w-full object-cover"/>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-gray-950"></div>
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1603436323647-53bd0a38f2f2?auto=format&fit=crop&w=1600&q=80" class="h-full w-full object-cover" alt="Miami ocean scenery background" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-gray-950"></div>
+      </div>
       <div class="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-4 text-center">
         <img src="https://yt3.googleusercontent.com/BbVkWBOSs-2N8nMXYp_DsRkAcQHou0gQzMOWTZoaVBv3s_6QolRT-gFFtX3qV7F_Bf5vzo1GJA=s160-c-k-c0x00ffffff-no-rj" alt="Flawda Fishing logo" class="mb-5 h-24 w-24 rounded-full border-4 border-white/80 shadow-xl"/>
         <h1 class="mb-2 text-5xl font-extrabold sm:text-6xl">Flawda Fishing</h1>
@@ -47,6 +51,7 @@
       </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="mx-auto max-w-4xl px-6 py-16 text-center">
       <h2 class="text-4xl font-extrabold mb-6">About Flawda Fishing</h2>
       <p class="text-lg leading-relaxed text-gray-300">
@@ -54,6 +59,7 @@
       </p>
     </section>
 
+    <!-- Stats -->
     <section id="stats" class="bg-gray-900/60 border-y border-white/10 py-14">
       <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 sm:grid-cols-3 text-center">
         <div class="rounded-2xl border border-white/10 bg-gray-900 p-6 shadow">
@@ -72,15 +78,18 @@
       <p id="statsError" class="mx-auto mt-4 max-w-5xl px-6 text-center text-sm text-red-400 hidden">Couldn’t load channel stats. We’ll fix it up shortly.</p>
     </section>
 
+    <!-- Latest Video -->
     <section id="latest" class="mx-auto max-w-6xl px-6 py-16">
       <h2 class="text-center text-4xl font-extrabold mb-8">Latest Upload</h2>
 
+      <!-- Skeleton while loading -->
       <div id="videoSkeleton" class="aspect-video w-full animate-pulse rounded-xl bg-white/5"></div>
 
       <div id="latestVideo" class="hidden"></div>
       <p id="videoError" class="mt-4 text-center text-sm text-red-400 hidden">Couldn’t load the latest video. <a class="underline" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@flawdafishing305/videos">See all uploads on YouTube</a>.</p>
     </section>
 
+    <!-- Socials -->
     <section class="mx-auto max-w-5xl px-6 pb-16 text-center">
       <h2 class="text-4xl font-extrabold mb-6">Connect With Us</h2>
       <p class="mb-6 text-lg text-gray-300">📧 flawdafishing305@gmail.com</p>
@@ -94,10 +103,13 @@
 
   <footer class="border-t border-white/10 py-6 text-center text-sm text-gray-400">© 2025 Flawda Fishing — Built with 💙 in Miami, FL</footer>
 
+  <!-- YouTube API Logic -->
   <script defer>
-    const API_KEY = "AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM";
-    const CHANNEL_ID = "UC6JiU_lImopJNSHra8zuLPQ";
+    // ====== CONFIG ======
+    const API_KEY = "AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM"; // Restrict this key to your domain in Google Cloud Console
+    const CHANNEL_ID = "UC6JiU_lImopJNSHra8zuLPQ"; // Your channel ID
 
+    // ====== HELPERS ======
     const nf = new Intl.NumberFormat('en-US');
     const $ = (id) => document.getElementById(id);
 
@@ -154,10 +166,12 @@
       }
     }
 
+    // Fire both in parallel
     (async function init() {
       loadChannelStats();
       loadLatestVideo();
 
+      // Optional: basic timeout so it never says "Loading…" forever
       setTimeout(() => {
         if ($('subCount').textContent.includes('Loading')) {
           $('subCount').textContent = '—';
