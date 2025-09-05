@@ -2,90 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flawda Fishing 🎣</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Flawda Fishing — reelin’ in the best catches from the 305! Miami-based fishing adventures, tips, and videos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://yt3.googleusercontent.com/BbVkWBOSs-2N8nMXYp_DsRkAcQHou0gQzMOWTZoaVBv3s_6QolRT-gFFtX3qV7F_Bf5vzo1GJA=s160-c-k-c0x00ffffff-no-rj" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
+    :root { color-scheme: dark; }
+    body { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
   </style>
 </head>
-<body class="bg-gray-900 text-white">
-
-  <!-- HERO -->
-  <section class="relative h-[95vh] bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1603436323647-53bd0a38f2f2?auto=format&fit=crop&w=1470&q=80');">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="relative z-10 max-w-2xl mx-auto px-4">
-      <img src="https://yt3.googleusercontent.com/BbVkWBOSs-2N8nMXYp_DsRkAcQHou0gQzMOWTZoaVBv3s_6QolRT-gFFtX3qV7F_Bf5vzo1GJA=s160-c-k-c0x00ffffff-no-rj" alt="Flawda Fishing Logo" class="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4 shadow-lg" />
-      <h1 class="text-5xl sm:text-6xl font-extrabold mb-2">Flawda Fishing</h1>
-      <p class="text-xl sm:text-2xl text-cyan-300">🌊 Reelin’ in the best catches from the 305!</p>
-      <p class="mt-2 text-lg text-gray-200">📍 Miami, FL | Fishing Adventures inland & off</p>
-      <a href="https://www.youtube.com/@flawdafishing305" target="_blank" class="mt-6 inline-block bg-cyan-500 text-black px-6 py-3 rounded-full font-bold hover:bg-cyan-400 transition">🎥 Watch on YouTube</a>
+<body class="bg-gray-950 text-white selection:bg-cyan-500/30">
+  <!-- Header/Nav -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-gray-950/60 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 font-extrabold text-xl">
+        <img class="h-8 w-8 rounded-full ring-2 ring-white/20" alt="Flawda Fishing logo" src="https://yt3.googleusercontent.com/BbVkWBOSs-2N8nMXYp_DsRkAcQHou0gQzMOWTZoaVBv3s_6QolRT-gFFtX3qV7F_Bf5vzo1GJA=s160-c-k-c0x00ffffff-no-rj"/>
+        <span>Flawda Fishing</span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#about" class="opacity-80 hover:opacity-100">About</a>
+        <a href="#stats" class="opacity-80 hover:opacity-100">Stats</a>
+        <a href="#latest" class="opacity-80 hover:opacity-100">Latest</a>
+      </nav>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@flawdafishing305?sub_confirmation=1" class="rounded-full bg-cyan-500 px-4 py-2 font-bold text-black hover:bg-cyan-400">Subscribe</a>
     </div>
-  </section>
+  </header>
 
-  <!-- ABOUT -->
-  <section class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-6">About Flawda Fishing</h2>
-    <p class="text-lg text-gray-300 leading-relaxed">
-      🐟 Stay hooked for epic fishing trips, tackle tips, and Florida’s finest waters. We're young, dedicated anglers showing the real side of Miami fishing — bass, saltwater, and everything in between.
-      Catch the vibe and roll with the crew.
-    </p>
-  </section>
+  <main id="top">
+    <!-- Hero -->
+    <section class="relative h-[92vh] min-h-[560px] w-full overflow-hidden">
+      <img alt="Miami water" src="https://images.unsplash.com/photo-1603436323647-53bd0a38f2f2?auto=format&fit=crop&w=1600&q=80" class="absolute inset-0 h-full w-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-gray-950"></div>
+      <div class="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-4 text-center">
+        <img src="https://yt3.googleusercontent.com/BbVkWBOSs-2N8nMXYp_DsRkAcQHou0gQzMOWTZoaVBv3s_6QolRT-gFFtX3qV7F_Bf5vzo1GJA=s160-c-k-c0x00ffffff-no-rj" alt="Flawda Fishing logo" class="mb-5 h-24 w-24 rounded-full border-4 border-white/80 shadow-xl"/>
+        <h1 class="mb-2 text-5xl font-extrabold sm:text-6xl">Flawda Fishing</h1>
+        <p class="text-cyan-300 text-xl sm:text-2xl">🌊 Reelin’ in the best catches from the 305!</p>
+        <p class="mt-2 text-base sm:text-lg text-gray-200">📍 Miami, FL — Inland, offshore, and everything in between.</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@flawdafishing305" class="rounded-full bg-red-600 px-5 py-3 font-bold hover:bg-red-500">🎥 Watch on YouTube</a>
+          <a href="#latest" class="rounded-full border border-white/20 px-5 py-3 font-bold hover:bg-white/10">▶️ Latest Upload</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- SUBSCRIBER COUNT -->
-  <section class="bg-gray-800 py-10 text-center">
-    <h2 class="text-3xl font-bold mb-4">Subscribers</h2>
-    <p id="subCount" class="text-2xl text-cyan-400">Loading...</p>
-  </section>
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-4xl px-6 py-16 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">About Flawda Fishing</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        🐟 Epic trips, tackle tips, and Florida’s finest waters. We’re young, dedicated anglers showing the real side of Miami fishing — bass, salt, and everything in between. Come roll with the crew!
+      </p>
+    </section>
 
-  <!-- LATEST VIDEO -->
-  <section class="bg-gray-900 py-16 px-6 text-center">
-    <h2 class="text-4xl font-bold mb-8">Latest Upload</h2>
-    <div id="latestVideo" class="max-w-5xl mx-auto aspect-video"></div>
-  </section>
+    <!-- Stats -->
+    <section id="stats" class="bg-gray-900/60 border-y border-white/10 py-14">
+      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 sm:grid-cols-3 text-center">
+        <div class="rounded-2xl border border-white/10 bg-gray-900 p-6 shadow">
+          <div class="text-sm uppercase tracking-wider text-white/70">Subscribers</div>
+          <div id="subCount" aria-live="polite" class="mt-2 text-3xl font-extrabold text-cyan-400">Loading…</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-gray-900 p-6 shadow">
+          <div class="text-sm uppercase tracking-wider text-white/70">Total Views</div>
+          <div id="viewCount" class="mt-2 text-3xl font-extrabold">—</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-gray-900 p-6 shadow">
+          <div class="text-sm uppercase tracking-wider text-white/70">Videos</div>
+          <div id="videoCount" class="mt-2 text-3xl font-extrabold">—</div>
+        </div>
+      </div>
+      <p id="statsError" class="mx-auto mt-4 max-w-5xl px-6 text-center text-sm text-red-400 hidden">Couldn’t load channel stats. We’ll fix it up shortly.</p>
+    </section>
 
-  <!-- SOCIALS -->
-  <section class="py-16 px-6 text-center">
-    <h2 class="text-4xl font-bold mb-6">Connect With Us</h2>
-    <p class="text-gray-300 text-lg mb-6">📧 flawdafishing305@gmail.com</p>
-    <div class="flex justify-center gap-4 flex-wrap">
-      <a href="https://www.youtube.com/@flawdafishing305" target="_blank" class="bg-red-600 px-5 py-2 rounded-full font-bold hover:bg-red-500 transition">🎥 YouTube</a>
-      <a href="https://www.instagram.com/flawda_fishingyt" target="_blank" class="bg-pink-600 px-5 py-2 rounded-full font-bold hover:bg-pink-500 transition">📸 Instagram</a>
-      <a href="mailto:flawdafishing305@gmail.com" class="bg-green-600 px-5 py-2 rounded-full font-bold hover:bg-green-500 transition">📩 Email</a>
-    </div>
-  </section>
+    <!-- Latest Video -->
+    <section id="latest" class="mx-auto max-w-6xl px-6 py-16">
+      <h2 class="text-center text-4xl font-extrabold mb-8">Latest Upload</h2>
 
-  <!-- FOOTER -->
-  <footer class="text-center py-6 text-sm text-gray-400 border-t border-gray-700">
-    &copy; 2025 Flawda Fishing — Built with 💙 in Miami, FL
-  </footer>
+      <!-- Skeleton while loading -->
+      <div id="videoSkeleton" class="aspect-video w-full animate-pulse rounded-xl bg-white/5"></div>
 
-  <!-- YOUTUBE API SCRIPT -->
-  <script>
-    const API_KEY = "AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM"; // <-- Replace with your YouTube API Key
-    const CHANNEL_ID = "UC6JiU_lImopJNSHra8zuLPQ"; // <-- Replace with your Channel ID (UCxxxx)
+      <div id="latestVideo" class="hidden"></div>
+      <p id="videoError" class="mt-4 text-center text-sm text-red-400 hidden">Couldn’t load the latest video. <a class="underline" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@flawdafishing305/videos">See all uploads on YouTube</a>.</p>
+    </section>
 
-    // Fetch sub count
-    fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UC6JiU_lImopJNSHra8zuLPQ}&key=${AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM}`)
-      .then(res => res.json())
-      .then(data => {
-        const subs = data.items[0].statistics.subscriberCount;
-        document.getElementById("subCount").textContent = subs.toLocaleString() + " Subscribers";
-      });
+    <!-- Socials -->
+    <section class="mx-auto max-w-5xl px-6 pb-16 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">Connect With Us</h2>
+      <p class="mb-6 text-lg text-gray-300">📧 flawdafishing305@gmail.com</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@flawdafishing305" class="rounded-full bg-red-600 px-5 py-2 font-bold hover:bg-red-500">🎥 YouTube</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/flawda_fishingyt" class="rounded-full bg-pink-600 px-5 py-2 font-bold hover:bg-pink-500">📸 Instagram</a>
+        <a href="mailto:flawdafishing305@gmail.com" class="rounded-full bg-green-600 px-5 py-2 font-bold hover:bg-green-500">📩 Email</a>
+      </div>
+    </section>
+  </main>
 
-    // Fetch latest video
-    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${UC6JiU_lImopJNSHra8zuLPQ}&order=date&maxResults=1&key=${AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM}`)
-      .then(res => res.json())
-      .then(data => {
-        const videoId = data.items[0].id.videoId;
-        document.getElementById("latestVideo").innerHTML =
-          `<iframe class="w-full h-full rounded-xl shadow-xl" src="https://www.youtube.com/embed/${xZhqMlPPWyk}" frameborder="0" allowfullscreen></iframe>`;
-      });
+  <footer class="border-t border-white/10 py-6 text-center text-sm text-gray-400">© 2025 Flawda Fishing — Built with 💙 in Miami, FL</footer>
+
+  <!-- YouTube API Logic -->
+  <script defer>
+    // ====== CONFIG ======
+    const API_KEY = "AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM"; // Restrict this key to your domain in Google Cloud Console
+    const CHANNEL_ID = "UC6JiU_lImopJNSHra8zuLPQ"; // Your channel ID
+
+    // ====== HELPERS ======
+    const nf = new Intl.NumberFormat('en-US');
+    const $ = (id) => document.getElementById(id);
+
+    async function getJSON(url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!data || !Array.isArray(data.items)) throw new Error('Bad response');
+      return data;
+    }
+
+    async function loadChannelStats() {
+      try {
+        const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${UC6JiU_lImopJNSHra8zuLPQ}&key=${AIzaSyC1Ic8GUz8bRiU15elOkHDVsytVKqMzXTM}`;
+        const data = await getJSON(url);
+        if (!data.items.length) throw new Error('No channel');
+        const stats = data.items[0].statistics || {};
+        const subs = stats.subscriberCount ? nf.format(+stats.subscriberCount) : 'Hidden';
+        const views = stats.viewCount ? nf.format(+stats.viewCount) : '—';
+        const vids = stats.videoCount ? nf.format(+stats.videoCount) : '—';
+
+        $('subCount').textContent = `${subs}${subs !== 'Hidden' ? ' Subscribers' : ''}`;
+        $('viewCount').textContent = views;
+        $('videoCount').textContent = vids;
+      } catch (e) {
+        $('statsError').classList.remove('hidden');
+        $('subCount').textContent = '—';
+      }
+    }
+
+    async function loadLatestVideo() {
+      try {
+        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${UC6JiU_lImopJNSHra8zuLPQ}&order=date&maxResults=1&type=video&key=${API_KEY}`;
+        const data = await getJSON(url);
+        if (!data.items.length) throw new Error('No videos');
+        const videoId = (data.items[0].id && data.items[0].id.videoId) || null;
+        if (!videoId) throw new Error('Missing videoId');
+
+        const iframe = document.createElement('iframe');
+        iframe.className = 'w-full h-full rounded-xl shadow-xl';
+        iframe.loading = 'lazy';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.src = `https://www.youtube.com/embed/${videoId}`;
+
+        $('videoSkeleton').classList.add('hidden');
+        const wrap = $('latestVideo');
+        wrap.innerHTML = '';
+        wrap.appendChild(iframe);
+        wrap.classList.remove('hidden');
+      } catch (e) {
+        $('videoSkeleton').classList.add('hidden');
+        $('videoError').classList.remove('hidden');
+      }
+    }
+
+    // Fire both in parallel
+    (async function init() {
+      loadChannelStats();
+      loadLatestVideo();
+
+      // Optional: basic timeout so it never says "Loading…" forever
+      setTimeout(() => {
+        if ($('subCount').textContent.includes('Loading')) {
+          $('subCount').textContent = '—';
+          $('statsError').classList.remove('hidden');
+        }
+      }, 8000);
+    })();
   </script>
-
 </body>
 </html>
